@@ -11,10 +11,10 @@ REPO_DIR = [
 
 
 def commit_all():
-    date_now = datetime.now().strftime("%d%m%Y")
+    date_now = datetime.now().strftime("%d%m%Y%S")
     command("git add .")
-    command(f'git commit -m "{date_now}"')  # Name repo?
-    command(f"git push")
+    command(f'git commit -m "🤖 Autocommit - {date_now}"')  # Name repo?
+    command(f"git push --force")
 
 
 def command(cmd: str):
